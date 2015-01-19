@@ -1,0 +1,21 @@
+<div ng-controller="View2Ctrl" class="container-fluid">
+  <div class="row"  resize>
+    <div class="col-sm-3 col-md-6" style="background-color:lavender;">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.</p>
+      <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        ex ea commodo consequat.</p>
+      </div>
+  <div  class="col-sm-9 col-md-6">
+    <carousel interval="myInterval">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="margin:auto;height:{{windowHeight}};">
+        <div class="carousel-caption">
+          <h4>Slide {{$index}}</h4>
+          <p>{{slide.text}}</p>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+</div>
+</div>
